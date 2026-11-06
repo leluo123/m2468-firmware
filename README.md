@@ -10,9 +10,13 @@
 
 ## 内容
 
-| 文件 | 大小 | SHA-256 |
+| 文件/目录 | 大小 | 说明 |
 |---|---|---|
-| `modem/modem-firmware-sm8550-m2468.bin` | 13,328,647 B | `6bbb65a7f9e6a2984dc0dcf5f84c98f5d97384bbaf072f64454eb3fbd1f930ff` |
+| `modem/modem-firmware-sm8550-m2468.bin` | 13,328,647 B | modem 分区整盘镜像<br>SHA-256 `6bbb65a7f9e6a2984dc0dcf5f84c98f5d97384bbaf072f64454eb3fbd1f930ff` |
+| `modem_pr/` | 11.6 MB / 166 个文件 | 解包好的固件树：`so/`（7 种 RF 卡）+ `mcfg/`（配置） |
+
+`modem_pr/` 就是主线 Linux 实际要用的那棵树，直接放到
+`/lib/firmware/qcom/sm8550/meizu/modem_pr/` 即可，不用再自己从分区镜像里解一遍。
 
 **固件版本**：`MPSS.DE.3.0.c3-00008-KAILUA_GEN_PACK-2`
 （`modem_a` 与 `modem_b` 两个分区的 `verinfo/ver_info.txt` 完全一致，换槽无意义）
