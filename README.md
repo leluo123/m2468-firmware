@@ -14,6 +14,7 @@
 |---|---|---|
 | `modem/modem-firmware-sm8550-m2468.bin` | 13,328,647 B | modem 分区整盘镜像<br>SHA-256 `6bbb65a7f9e6a2984dc0dcf5f84c98f5d97384bbaf072f64454eb3fbd1f930ff` |
 | `modem_pr/` | 11.6 MB / 166 个文件 | 解包好的固件树：`so/`（7 种 RF 卡）+ `mcfg/`（配置） |
+| `vendor_boot/vendor_boot_a-m2468.img` | 96 MB | 原厂 vendor_boot 镜像，里面是 356 个原厂内核模块，移植时当参考 |
 
 `modem_pr/` 就是主线 Linux 实际要用的那棵树，直接放到
 `/lib/firmware/qcom/sm8550/meizu/modem_pr/` 即可，不用再自己从分区镜像里解一遍。
